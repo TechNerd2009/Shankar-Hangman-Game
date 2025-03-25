@@ -1,4 +1,4 @@
-# 🎩 Hangman Game - A Twist on the Classic!
+# 🎩 Vibecoded Hangman Game - A Twist on the Classic!
 
 An interactive web-based Hangman game with animations, sound effects, and a unique gameplay twist!
 
@@ -6,7 +6,7 @@ An interactive web-based Hangman game with animations, sound effects, and a uniq
 
 ## 📜 Description
 
-This Hangman game flips the traditional rules—literally! Instead of building the hangman, you start with a fully assembled figure, and with each incorrect guess, one limb falls off. Your goal? Guess the word before your poor hangman loses all its limbs! ⚰️
+This Vibecoded Hangman game flips the traditional rules—literally! Instead of building the hangman, you start with a fully assembled figure, and with each incorrect guess, one limb falls off. Your goal? Guess the word before your poor hangman loses all its limbs! ⚰️
 
 ---
 
@@ -23,21 +23,20 @@ This Hangman game flips the traditional rules—literally! Instead of building t
 
 ## 🎮 How to Play
 
-1. Open `index.html` in your web browser.
-2. A random word will be selected and displayed as underscores (_ _ _ _ _).
-3. Type letters on your keyboard to guess the word.
-4. ✅ **Correct Guess** – The letter will appear in the word.
-5. ❌ **Incorrect Guess** – A limb will fall off the hangman.
-6. 🏅 **Win** – Guess the entire word before all limbs fall off.
-7. ☠️ **Lose** – If all limbs fall off before you complete the word, it's game over.
-8. 🔄 Click **"Play Again"** to start a new round!
+1. When you load the game, a random word will be selected and displayed as underscores (_ _ _ _ _).
+2. Type letters on your keyboard to guess the word.
+3. ✅ **Correct Guess** – The letter will appear in the word.
+4. ❌ **Incorrect Guess** – A limb will fall off the hangman.
+5. 🏅 **Win** – Guess the entire word before all limbs fall off.
+6. ☠️ **Lose** – If all limbs fall off before you complete the word, it's game over.
+7. 🔄 Click **"Play Again"** to start a new round!
 
 ---
 
 ## 📂 Project Structure
 
 ```
-📦 Hangman Game
+📦 Vibecoded Hangman Game
 ├── 📄 index.html   # Main game layout
 ├── 🎨 style.css    # Styling and animations
 ├── 🎮 script.js    # Game logic and event handling
@@ -63,7 +62,7 @@ This Hangman game flips the traditional rules—literally! Instead of building t
 
 ## 🌐 Browser Compatibility
 
-This game is designed to be fully responsive across different browsers, devices, and screen sizes.
+This vibecoded game is designed to be fully responsive across different browsers, devices, and screen sizes.
 ---
 
 ## 🚀 Future Enhancements
@@ -78,4 +77,4 @@ This game is designed to be fully responsive across different browsers, devices,
 
 ## 🎯 Ready to Play?
 
-Clone the repo, open `index.html`, and start guessing! Can you save the hangman? 🤔💀
+Clone the repo, run the program, and start guessing! Can you save the hangman? 🤔💀
