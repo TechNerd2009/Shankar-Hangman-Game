@@ -1,0 +1,395 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Header Styles */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #ff6347;
+    font-size: 2.5rem;
+}
+
+/* Info Button Styles */
+.info-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.info-button:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+
+.instructions {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Hangman SVG Styles */
+.hangman-container {
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+#hangman {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Limb Animation Classes */
+.fall-animation {
+    animation: fallOff 1s ease-in forwards;
+}
+
+@keyframes fallOff {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(300px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* Head Animation */
+.head-fall-animation {
+    animation: headFall 1s ease-in forwards;
+}
+
+@keyframes headFall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(50px) rotate(20deg);
+    }
+    100% {
+        transform: translateY(300px) rotate(60deg);
+        opacity: 0;
+    }
+}
+
+/* Body Animation */
+.body-fall-animation {
+    animation: bodyFall 1s ease-in forwards;
+}
+
+@keyframes bodyFall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+}
+
+/* Win Animation */
+.win-animation {
+    animation: celebrate 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes celebrate {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Confetti Animation */
+.confetti {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background-color: #f00;
+    animation: confettiFall 4s ease-in-out infinite;
+    z-index: 10;
+    top: -20px;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Confetti shapes */
+.confetti.square {
+    width: 12px;
+    height: 12px;
+}
+
+.confetti.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.confetti.triangle {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 16px solid #f00;
+    background-color: transparent;
+}
+
+/* Dramatic hangman fall animation */
+.dramatic-fall {
+    animation: dramaticFall 2s ease-in forwards;
+    transform-origin: top center;
+}
+
+@keyframes dramaticFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    20% {
+        transform: translateY(20px) rotate(5deg);
+    }
+    60% {
+        transform: translateY(100px) rotate(-10deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(150vh) rotate(-30deg);
+        opacity: 0;
+    }
+}
+
+/* Game Status Styles */
+.game-status {
+    margin-top: 30px;
+}
+
+.word-display {
+    margin: 20px 0;
+    font-size: 2rem;
+    letter-spacing: 10px;
+}
+
+.guessed-letters {
+    margin: 20px 0;
+}
+
+.guessed-letters p {
+    font-weight: bold;
+    color: #4682b4;
+    margin-bottom: 10px;
+}
+
+#guessedLetters {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.guessed-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.correct-letter {
+    background-color: #32cd32; /* Green */
+    color: white;
+}
+
+.incorrect-letter {
+    background-color: #ff4500; /* Red */
+    color: white;
+}
+
+.message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    min-height: 40px;
+}
+
+.win-message {
+    color: #32cd32;
+}
+
+.lose-message {
+    color: #ff4500;
+}
+
+.restart-button {
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: none;
+}
+
+.restart-button:hover {
+    background-color: #36648b;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 80%;
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: #ff6347;
+}
+
+.modal h2 {
+    color: #4682b4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-body {
+    line-height: 1.6;
+}
+
+.modal-body h3 {
+    color: #ff6347;
+    margin: 15px 0 10px;
+}
+
+.modal-body ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.modal-body li {
+    margin-bottom: 8px;
+}
+
+.fun-fact {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-left: 5px solid #4682b4;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .word-display {
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+    }
+    
+    .hangman-container {
+        max-width: 250px;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 15% auto;
+        padding: 15px;
+    }
+    
+    .modal h2 {
+        font-size: 1.5rem;
+    }
+    
+    .info-button {
+        font-size: 1.5rem;
+    }
+}

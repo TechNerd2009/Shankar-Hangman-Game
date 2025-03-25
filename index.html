@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header-container">
+            <h1>Hangman Game</h1>
+            <button id="infoButton" class="info-button">ℹ️</button>
+        </div>
+        <p class="instructions">Guess the word by typing letters before the hangman falls apart!</p>
+        
+        <!-- Info Modal -->
+        <div id="infoModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>How to Play Hangman 🎮</h2>
+                <div class="modal-body">
+                    <p>🎯 <strong>Objective:</strong> Guess the hidden word before the hangman falls apart!</p>
+                    
+                    <h3>Game Rules 📜</h3>
+                    <ul>
+                        <li>🔤 Type letters on your keyboard to guess</li>
+                        <li>✅ Correct guesses reveal the letter in the word</li>
+                        <li>❌ Incorrect guesses make a limb fall off</li>
+                        <li>💀 After 6 incorrect guesses, you lose</li>
+                        <li>🏆 Guess the entire word to win!</li>
+                    </ul>
+                    
+                    <h3>Tips 💡</h3>
+                    <ul>
+                        <li>Start with common vowels (a, e, i, o, u)</li>
+                        <li>Then try common consonants (t, n, s, r)</li>
+                        <li>Pay attention to letter patterns</li>
+                    </ul>
+                    
+                    <p class="fun-fact">🎭 <strong>Fun Fact:</strong> This version of Hangman is unique! Instead of building the hangman with incorrect guesses, our hangman starts complete and falls apart piece by piece!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hangman-container">
+            <!-- SVG Hangman Figure -->
+            <svg id="hangman" viewBox="0 0 300 300" width="300" height="300">
+                <!-- Gallows -->
+                <rect id="gallows-base" x="50" y="280" width="200" height="20" fill="#8B4513"/>
+                <rect id="gallows-pole" x="150" y="20" width="10" height="260" fill="#8B4513"/>
+                <rect id="gallows-top" x="150" y="20" width="100" height="10" fill="#8B4513"/>
+                <line id="gallows-rope" x1="220" y1="20" x2="220" y2="60" stroke="#A0522D" stroke-width="5"/>
+                
+                <!-- Hangman Figure (all parts start visible) -->
+                <circle id="head" cx="220" cy="80" r="20" fill="#FFD700"/>
+                <rect id="body" x="215" y="100" width="10" height="80" fill="#FF6347"/>
+                <line id="left-arm" x1="215" y1="120" x2="180" y2="140" stroke="#FF6347" stroke-width="8" stroke-linecap="round"/>
+                <line id="right-arm" x1="225" y1="120" x2="260" y2="140" stroke="#FF6347" stroke-width="8" stroke-linecap="round"/>
+                <line id="left-leg" x1="215" y1="180" x2="190" y2="230" stroke="#4682B4" stroke-width="8" stroke-linecap="round"/>
+                <line id="right-leg" x1="225" y1="180" x2="250" y2="230" stroke="#4682B4" stroke-width="8" stroke-linecap="round"/>
+                
+                <!-- Face details -->
+                <circle id="left-eye" cx="213" cy="75" r="3" fill="#000"/>
+                <circle id="right-eye" cx="227" cy="75" r="3" fill="#000"/>
+                <path id="smile" d="M210 90 Q220 100 230 90" stroke="#000" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+        
+        <div class="game-status">
+            <div class="word-display" id="wordDisplay">
+                <!-- Word underscores will be added here by JavaScript -->
+            </div>
+            
+            <div class="guessed-letters">
+                <p>Guessed Letters:</p>
+                <div id="guessedLetters"></div>
+            </div>
+            
+            <div id="message" class="message"></div>
+            
+            <button id="restartButton" class="restart-button">Play Again</button>
+        </div>
+    </div>
+    
+    <!-- Audio elements -->
+    <audio id="correctSound" src="assets/correct.mp3" preload="auto"></audio>
+    <audio id="incorrectSound" src="assets/incorrect.mp3" preload="auto"></audio>
+    <audio id="winSound" src="assets/win.mp3" preload="auto"></audio>
+    <audio id="loseSound" src="assets/lose.mp3" preload="auto"></audio>
+    
+    <script src="words.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
