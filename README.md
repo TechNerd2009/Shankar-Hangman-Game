@@ -63,6 +63,7 @@ This Vibecoded Hangman game flips the traditional rules—literally! Instead of 
 ## 🌐 Browser Compatibility
 
 This vibecoded game is designed to be fully responsive across different browsers, devices, and screen sizes.
+
 ---
 
 ## 🚀 Future Enhancements
