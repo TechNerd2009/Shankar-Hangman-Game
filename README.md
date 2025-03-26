@@ -79,4 +79,4 @@ This vibecoded game is designed to be fully responsive across different browsers
 
 ## 🎯 Ready to Play?
 
-Clone the repo, run the program, and start guessing! Can you save the hangman? 🤔💀
+Clone the repo, run the program, and start guessing! Can you save the hangman? 🤔 🚀
