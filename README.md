@@ -23,6 +23,7 @@ This Vibecoded Hangman game flips the traditional rules—literally! Instead of 
 
 ## 🎮 How to Play
 
+1. **Play online here:** [VibeCoded Hangman](https://vibecoded-hangman-game.netlify.app/)
 1. When you load the game, a random word will be selected and displayed as underscores (_ _ _ _ _).
 2. Type letters on your keyboard to guess the word.
 3. ✅ **Correct Guess** – The letter will appear in the word.
