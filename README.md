@@ -1,4 +1,4 @@
-# 🎩 Vibecoded Hangman Game - A Twist on the Classic!
+# 🎩 Hangman Game - A Twist on the Classic!
 
 An interactive web-based Hangman game with animations, sound effects, and a unique gameplay twist!
 
@@ -6,7 +6,7 @@ An interactive web-based Hangman game with animations, sound effects, and a uniq
 
 ## 📜 Description
 
-This Vibecoded Hangman game flips the traditional rules—literally! Instead of building the hangman, you start with a fully assembled figure, and with each incorrect guess, one limb falls off. Your goal? Guess the word before your poor hangman loses all its limbs! ⚰️
+This Hangman game flips the traditional rules—literally! Instead of building the hangman, you start with a fully assembled figure, and with each incorrect guess, one limb falls off. Your goal? Guess the word before your poor hangman loses all its limbs! ⚰️
 
 ---
 
@@ -23,7 +23,7 @@ This Vibecoded Hangman game flips the traditional rules—literally! Instead of 
 
 ## 🎮 How to Play
 
-1. **Play online here:** [VibeCoded Hangman](https://vibecoded-hangman-game.netlify.app/)
+1. **Play online here:** [Hangman](https://shankar-hangman-game.netlify.app/)
 1. When you load the game, a random word will be selected and displayed as underscores (_ _ _ _ _).
 2. Type letters on your keyboard to guess the word.
 3. ✅ **Correct Guess** – The letter will appear in the word.
@@ -37,7 +37,7 @@ This Vibecoded Hangman game flips the traditional rules—literally! Instead of 
 ## 📂 Project Structure
 
 ```
-📦 Vibecoded Hangman Game
+📦 Hangman Game
 ├── 📄 index.html   # Main game layout
 ├── 🎨 style.css    # Styling and animations
 ├── 🎮 script.js    # Game logic and event handling
@@ -63,7 +63,7 @@ This Vibecoded Hangman game flips the traditional rules—literally! Instead of 
 
 ## 🌐 Browser Compatibility
 
-This vibecoded game is designed to be fully responsive across different browsers, devices, and screen sizes.
+This hangman game is designed to be fully responsive across different browsers, devices, and screen sizes.
 
 ---
 
